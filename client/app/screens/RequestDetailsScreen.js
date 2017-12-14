@@ -38,7 +38,7 @@ export default class RequestDetailsScreen extends React.Component {
 	}
 
 	componentWillUnmount () {
-		if(this.state.accepted) {
+		if(this.state.request.accepted) {
 			this.props.navigation.state.params.onNavigateBack(this.state.request.requestId);
 		} else {
 			this.props.navigation.state.params.onNavigateBack(null);
